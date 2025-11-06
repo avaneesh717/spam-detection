@@ -1,0 +1,79 @@
+/* CSS Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #root { height: 100%; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif; line-height: 1.5; background: #0f172a; color: #e2e8f0; }
+
+/* Color tokens */
+:root {
+  --bg: #0f172a;            /* slate-900 */
+  --panel: #111827;         /* gray-900 */
+  --muted: #94a3b8;         /* slate-400 */
+  --text: #e2e8f0;          /* slate-200 */
+  --primary: #3b82f6;       /* blue-500 */
+  --primary-600: #2563eb;   /* blue-600 */
+  --accent: #22d3ee;        /* cyan-400 */
+  --danger: #ef4444;        /* red-500 */
+  --border: #1f2937;        /* gray-800 */
+  --card: #0b1220;          /* deep panel */
+}
+
+/* Layout helpers */
+.container { max-width: 960px; margin: 0 auto; padding: 24px; }
+.page { padding: 32px 0; }
+
+/* Typography */
+h1, h2, h3 { color: var(--text); font-weight: 700; letter-spacing: 0.2px; }
+h1 { font-size: 2rem; margin-bottom: 16px; }
+h2 { font-size: 1.5rem; margin-bottom: 12px; }
+h3 { font-size: 1.25rem; margin-bottom: 10px; }
+p { color: var(--muted); margin-top: 10px; }
+
+/* Card */
+.card { background: linear-gradient(180deg, var(--panel), var(--card)); border: 1px solid var(--border); border-radius: 14px; padding: 20px; box-shadow: 0 10px 24px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.03); }
+
+/* Forms */
+.form { display: grid; gap: 12px; margin-top: 12px; }
+.field { display: grid; gap: 6px; }
+.label { font-size: 0.875rem; color: var(--muted); }
+.input { width: 100%; padding: 12px 14px; border-radius: 10px; background: #0b1220; color: var(--text); border: 1px solid var(--border); outline: none; transition: border-color 120ms ease, box-shadow 120ms ease; }
+.input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25); }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 14px; border-radius: 10px; border: 1px solid transparent; color: white; cursor: pointer; font-weight: 600; transition: transform 80ms ease, box-shadow 120ms ease, background 120ms ease, border-color 120ms ease; }
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: linear-gradient(180deg, var(--primary), var(--primary-600)); box-shadow: 0 8px 18px rgba(37, 99, 235, 0.35); }
+.btn-primary:hover { filter: brightness(1.05); }
+.btn-muted { background: #111827; color: var(--text); border-color: var(--border); }
+.btn-danger { background: var(--danger); }
+
+/* Lists */
+.list { list-style: none; margin-top: 14px; }
+.list-item { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 14px; border: 1px solid var(--border); border-radius: 10px; background: #0b1220; }
+.list-item + .list-item { margin-top: 10px; }
+
+/* Navbar */
+.navbar { position: sticky; top: 0; z-index: 20; background: rgba(2,6,23,0.75); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+.navbar-inner { display: flex; align-items: center; gap: 16px; padding: 14px 24px; max-width: 960px; margin: 0 auto; }
+.nav-brand { color: var(--text); font-weight: 800; letter-spacing: 0.3px; text-decoration: none; }
+.nav-links { display: flex; gap: 16px; margin-left: auto; }
+.nav-link { color: var(--muted); text-decoration: none; font-weight: 600; padding: 8px 10px; border-radius: 8px; transition: color 120ms ease, background 120ms ease; }
+.nav-link:hover { color: var(--text); background: #0b1220; }
+.nav-link.active { color: var(--text); background: #0b1220; border: 1px solid var(--border); }
+
+/* Layout blocks */
+.stack { display: grid; gap: 12px; }
+.row { display: flex; gap: 10px; flex-wrap: wrap; }
+.spacer { height: 16px; }
+
+/* Page shells */
+.page-header { margin-bottom: 12px; }
+.page-content { padding: 20px 0; }
+
+/* Utilities */
+.mt-2 { margin-top: 8px; }
+.mt-3 { margin-top: 12px; }
+.mt-4 { margin-top: 16px; }
+.w-full { width: 100%; }
+.center { display: grid; place-items: center; }
+
+
