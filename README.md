@@ -11,7 +11,7 @@ Database: MySQL (via MySQL Workbench)
 This project is a full stack web application that allows users to register, log in, manage personal contacts, and mark phone numbers as spam. It also includes a global database where all phone numbers (from both registered users and contacts) are stored and searchable.
 
 🧠 Features
-🔐 Task 1: Authentication and Personal Contacts
+ Authentication and Personal Contacts
 
 User Registration and Login
 
@@ -31,7 +31,7 @@ Contacts do not need to be registered users.
 
 Each user can see only their own contact list.
 
-🌍 Task 2: Global Database and Spam Marking
+ Global Database and Spam Marking
 
 Global Database
 
@@ -51,7 +51,7 @@ Each number in the global database includes a Spam Likelihood value.
 
 It is calculated based on how many times that number has been marked as spam across all users.
 
-🔍 Task 3: Filter by Search
+ Filter by Search
 
 Search by Name
 
